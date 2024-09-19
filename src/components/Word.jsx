@@ -1,5 +1,8 @@
+import { useState } from "react";
+
 function Word() {
-  return <div>Hello World!</div>;
+  const [text, setText] = useState("banana");
+  return <div>{text}</div>;
 }
 
 export default Word;
