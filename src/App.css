@@ -15,6 +15,7 @@
   width: fit-content;
   cursor: pointer;
   user-select: none;
+  transition: opacity 400ms ease-in-out;
 }
 .word:hover {
   opacity: 0.3;
