@@ -5,8 +5,8 @@ function Word() {
   const [color, setColor] = useState("yellow");
 
   function handleClick() {
-    console.log(text);
-    color = "#000";
+    // when a component's state is altered, it is re-rendered asynchronously by react
+    setColor("#000");
   }
 
   return (
