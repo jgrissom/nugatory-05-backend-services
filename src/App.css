@@ -9,9 +9,22 @@
   transform: translateX(-50%);
   z-index: -1;
 }
+.word {
+  color: var(--word-color);
+  font-size: 2rem;
+  width: fit-content;
+  cursor: pointer;
+  user-select: none;
+}
+.word:hover {
+  opacity: 0.3;
+}
 
 @media screen and (min-width: 600px) {
   .app-header {
     font-size: 7rem;
+  }
+  .word {
+    font-size: 3.5rem;
   }
 }
