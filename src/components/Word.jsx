@@ -6,6 +6,7 @@ function Word() {
 
   function handleClick() {
     console.log(text);
+    color = "#000";
   }
 
   return (
