@@ -14,7 +14,7 @@ export default function Word(props) {
       ref={wordRef}
       className="word"
       style={{
-        textShadow: `0 0 .25rem ${props.word.color}`,
+        textShadow: `0 0 .25rem rgb(${props.word.r},${props.word.g},${props.word.b})`,
       }}
       onClick={() => props.onDelete(props.word.id)}
     >

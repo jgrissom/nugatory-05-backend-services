@@ -5,12 +5,12 @@ import "./App.css";
 
 function App() {
   const [words, setWords] = useState([
-    { id: 1, text: "banana", color: "yellow" },
-    { id: 2, text: "apple", color: "#ff1a00" },
-    { id: 3, text: "lime", color: "#00ff00" },
-    { id: 4, text: "orange", color: "orange" },
-    { id: 5, text: "pear", color: "yellowgreen" },
-    { id: 6, text: "blueberry", color: "#0099ff" },
+    { id: 1, text: "banana", r: 255, g: 255, b: 0 },
+    { id: 2, text: "apple", r: 255, g: 26, b: 0 },
+    { id: 3, text: "lime", r: 0, g: 255, b: 0 },
+    { id: 4, text: "orange", r: 255, g: 165, b: 0 },
+    { id: 5, text: "pear", r: 154, g: 205, b: 50 },
+    { id: 6, text: "blueberry", r: 0, g: 153, b: 255 },
   ]);
 
   function handleDelete(wordId) {
