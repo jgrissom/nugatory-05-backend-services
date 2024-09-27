@@ -11,6 +11,7 @@ function App() {
 
   function handleDelete(wordId) {
     console.log(`delete word: ${wordId}`);
+    setWords(words.filter((w) => w.id !== wordId));
   }
 
   return (
