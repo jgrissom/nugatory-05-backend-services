@@ -1,6 +1,7 @@
 :root {
   --main-bg-color: #242424;
   --main-color: #242424f8;
+  --main-text-shadow: 0 0 0.25rem rgba(255, 255, 255, 0.6);
 
   font-family: "Luckiest Guy", cursive;
   font-size: 12pt;

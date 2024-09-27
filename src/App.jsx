@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Counter from "./components/Counter";
 import Word from "./components/Word";
 import "./App.css";
 
@@ -20,6 +21,7 @@ function App() {
       {words.map((word) => (
         <Word key={word.id} word={word} onDelete={handleDelete} />
       ))}
+      <Counter totalWords={words.length} />
     </div>
   );
 }
