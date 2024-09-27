@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Word() {
+function Word(props) {
   const [text, setText] = useState("banana");
   const [color, setColor] = useState("yellow");
 
@@ -9,6 +9,7 @@ function Word() {
     setColor("#000");
   }
 
+  console.log(props);
   return (
     <div
       className="word"
