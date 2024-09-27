@@ -6,6 +6,8 @@ function App() {
     <div>
       <header className="app-header">nugatory</header>
       <Word />
+      <Word />
+      <Word />
     </div>
   );
 }
