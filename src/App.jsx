@@ -8,6 +8,9 @@ function App() {
     { id: 1, text: "banana", color: "yellow" },
     { id: 2, text: "apple", color: "#ff1a00" },
     { id: 3, text: "lime", color: "#00ff00" },
+    { id: 4, text: "orange", color: "orange" },
+    { id: 5, text: "pear", color: "yellowgreen" },
+    { id: 6, text: "blueberry", color: "#0099ff" },
   ]);
 
   function handleDelete(wordId) {
