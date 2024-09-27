@@ -1,4 +1,7 @@
+import { ri } from "../Utils.js";
+
 export default function Word(props) {
+  console.log(ri(0, window.innerHeight));
   return (
     <div
       className="word"
