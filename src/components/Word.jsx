@@ -5,8 +5,8 @@ export default function Word(props) {
   const wordRef = useRef();
   useLayoutEffect(() => {
     const el = wordRef.current;
-    el.style.top = ri(0, window.innerHeight) + "px";
-    el.style.left = ri(0, window.innerWidth) + "px";
+    el.style.top = ri(0, window.innerHeight - el.offsetHeight) + "px";
+    el.style.left = ri(0, window.innerWidth - el.offsetWidth) + "px";
   }, []);
 
   return (
