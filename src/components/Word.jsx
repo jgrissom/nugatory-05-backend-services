@@ -7,7 +7,7 @@ export default function Word(props) {
     const el = wordRef.current;
     el.style.top = ri(0, window.innerHeight) + "px";
     el.style.left = ri(0, window.innerWidth) + "px";
-  });
+  }, [props.word]);
 
   return (
     <div
