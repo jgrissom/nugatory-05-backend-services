@@ -25,6 +25,8 @@
   width: fit-content;
   cursor: pointer;
   user-select: none;
+  position: fixed;
+  z-index: 10;
   transition: opacity 400ms ease-in-out;
 }
 .word:hover {
