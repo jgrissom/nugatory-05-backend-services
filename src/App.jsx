@@ -18,13 +18,7 @@ function App() {
     <div>
       <header className="app-header">nugatory</header>
       {words.map((word) => (
-        <Word
-          key={word.id}
-          id={word.id}
-          text={word.text}
-          color={word.color}
-          onDelete={handleDelete}
-        />
+        <Word key={word.id} word={word} onDelete={handleDelete} />
       ))}
     </div>
   );
