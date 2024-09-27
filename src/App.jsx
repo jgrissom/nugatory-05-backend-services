@@ -13,7 +13,7 @@ function App() {
     <div>
       <header className="app-header">nugatory</header>
       {words.map((word) => (
-        <Word />
+        <Word key={word.id} />
       ))}
     </div>
   );
