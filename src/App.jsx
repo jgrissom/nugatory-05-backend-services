@@ -9,11 +9,20 @@ function App() {
     { id: 3, text: "lime", color: "#00ff00" },
   ]);
 
+  function handleDelete() {
+    console.log("delete word");
+  }
+
   return (
     <div>
       <header className="app-header">nugatory</header>
       {words.map((word) => (
-        <Word key={word.id} text={word.text} color={word.color} />
+        <Word
+          key={word.id}
+          text={word.text}
+          color={word.color}
+          onDelete={handleDelete}
+        />
       ))}
     </div>
   );
