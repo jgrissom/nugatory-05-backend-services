@@ -9,8 +9,8 @@ function App() {
     { id: 3, text: "lime", color: "#00ff00" },
   ]);
 
-  function handleDelete() {
-    console.log("delete word");
+  function handleDelete(wordId) {
+    console.log(`delete word: ${wordId}`);
   }
 
   return (
@@ -19,6 +19,7 @@ function App() {
       {words.map((word) => (
         <Word
           key={word.id}
+          id={word.id}
           text={word.text}
           color={word.color}
           onDelete={handleDelete}
