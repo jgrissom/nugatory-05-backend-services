@@ -6,6 +6,7 @@ export default function NewWord() {
   const [red, setRed] = useState(255);
   const [green, setGreen] = useState(255);
   const [blue, setBlue] = useState(255);
+  const [text, setText] = useState("");
 
   return (
     <>
@@ -15,7 +16,7 @@ export default function NewWord() {
           <header
             style={{ textShadow: `0 0 0.25rem rgb(${red}, ${green}, ${blue})` }}
           >
-            nugatory
+            {text}
           </header>
           <div className="color">
             <div
@@ -63,7 +64,18 @@ export default function NewWord() {
             <div className="value">{blue}</div>
           </div>
           <div>
-            <input id="text" type="text" placeholder="new word" />
+            <input
+              id="text"
+              type="text"
+              placeholder="new word"
+              maxLength="16"
+              autoCapitalize="off"
+              autoComplete="off"
+              autoCorrect="off"
+              autoFocus
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+            />
           </div>
           <div>
             <button disabled id="save">
