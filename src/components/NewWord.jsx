@@ -6,7 +6,7 @@ export default function NewWord(props) {
   const [red, setRed] = useState(255);
   const [green, setGreen] = useState(255);
   const [blue, setBlue] = useState(255);
-  const [text, setText] = useState("");
+  const [text, setText] = useState("nugatory");
   const [showDialog, setShowDialog] = useState(false);
 
   function handleSubmit(e) {
@@ -18,7 +18,7 @@ export default function NewWord(props) {
     setRed(255);
     setGreen(255);
     setBlue(255);
-    setText("");
+    setText("nugatory");
     setShowDialog(false);
   }
   function handleKeyUp(e) {
@@ -95,6 +95,7 @@ export default function NewWord(props) {
                 autoFocus
                 value={text}
                 onChange={(e) => setText(e.target.value)}
+                onFocus={(e) => e.target.select()}
               />
             </div>
             <div>
