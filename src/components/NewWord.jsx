@@ -12,6 +12,13 @@ export default function NewWord(props) {
   function handleSubmit(e) {
     e.preventDefault();
     props.onAdd(text, red, green, blue);
+    hideDialog();
+  }
+  function hideDialog() {
+    setRed(255);
+    setGreen(255);
+    setBlue(255);
+    setText("");
     setShowDialog(false);
   }
 
@@ -97,11 +104,7 @@ export default function NewWord(props) {
               </button>
             </div>
             <div>
-              <button
-                id="cancel"
-                type="button"
-                onClick={() => setShowDialog(false)}
-              >
+              <button id="cancel" type="button" onClick={hideDialog}>
                 cancel
               </button>
             </div>
