@@ -78,7 +78,7 @@ export default function NewWord() {
             />
           </div>
           <div>
-            <button disabled id="save">
+            <button type="submit" id="save">
               save
             </button>
           </div>
