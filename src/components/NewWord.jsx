@@ -97,7 +97,13 @@ export default function NewWord(props) {
               </button>
             </div>
             <div>
-              <button id="cancel">cancel</button>
+              <button
+                id="cancel"
+                type="button"
+                onClick={() => setShowDialog(false)}
+              >
+                cancel
+              </button>
             </div>
           </div>
         </form>
