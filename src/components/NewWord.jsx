@@ -4,6 +4,9 @@ import trigger from "../assets/trigger.svg";
 
 export default function NewWord() {
   const [red, setRed] = useState(255);
+  const [green, setGreen] = useState(255);
+  const [blue, setBlue] = useState(255);
+
   return (
     <>
       <form>
@@ -28,18 +31,32 @@ export default function NewWord() {
           <div className="color">
             <div
               className="color-square"
-              style={{ background: "rgb(0, 255, 0)" }}
+              style={{ background: `rgb(0, ${green}, 0)` }}
             ></div>
-            <input id="green" type="range" min="0" max="255" value="255" />
-            <div className="value">255</div>
+            <input
+              id="green"
+              type="range"
+              min="0"
+              max="255"
+              value={green}
+              onChange={(e) => setGreen(e.target.value)}
+            />
+            <div className="value">{green}</div>
           </div>
           <div className="color">
             <div
               className="color-square"
-              style={{ background: "rgb(0, 0, 255)" }}
+              style={{ background: `rgb(0, 0, ${blue})` }}
             ></div>
-            <input id="blue" type="range" min="0" max="255" value="255" />
-            <div className="value">255</div>
+            <input
+              id="blue"
+              type="range"
+              min="0"
+              max="255"
+              value={blue}
+              onChange={(e) => setBlue(e.target.value)}
+            />
+            <div className="value">{blue}</div>
           </div>
           <div>
             <input id="text" type="text" placeholder="new word" />
