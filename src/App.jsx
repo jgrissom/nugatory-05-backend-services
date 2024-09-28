@@ -9,10 +9,10 @@ function App() {
   const [words, setWords] = useState([]);
   const apiEndpoint = "https://nugatoryapi.azurewebsites.net/api/word";
 
-  function handleDelete(wordId) {
-    console.log(`delete word: ${wordId}`);
-    // setWords(words.filter((w) => w.id !== wordId));
-  }
+  const handleDelete = async (wordId) => {
+    await axios.delete(`${apiEndpoint}/${wordId}`);
+    setWords(words.filter((w) => w.id !== wordId));
+  };
   const handleAdd = async (text, r, g, b) => {
     console.log(`add ${text}`);
     const { data: post } = await axios.post(apiEndpoint, {
