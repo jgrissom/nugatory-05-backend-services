@@ -12,7 +12,11 @@ export default function NewWord() {
       <form>
         <div id="overlay"></div>
         <div id="dialog">
-          <header>nugatory</header>
+          <header
+            style={{ textShadow: `0 0 0.25rem rgb(${red}, ${green}, ${blue})` }}
+          >
+            nugatory
+          </header>
           <div className="color">
             <div
               className="color-square"
