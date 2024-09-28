@@ -13,12 +13,16 @@ function App() {
     console.log(`delete word: ${wordId}`);
     // setWords(words.filter((w) => w.id !== wordId));
   }
-  function handleAdd(text, r, g, b) {
+  const handleAdd = async (text, r, g, b) => {
     console.log(`add ${text}`);
-    // const id =
-    //   words.length === 0 ? 1 : Math.max(...words.map((word) => word.id)) + 1;
-    // setWords(words.concat({ id: id, text: text, r: r, g: g, b: b }));
-  }
+    const { data: post } = await axios.post(apiEndpoint, {
+      text: text,
+      r: r,
+      g: g,
+      b: b,
+    });
+    setWords(words.concat(post));
+  };
   useEffect(() => {
     // initial data loaded here
     async function fetchData() {
