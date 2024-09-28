@@ -1,7 +1,9 @@
+import { useState } from "react";
 import "./NewWord.css";
 import trigger from "../assets/trigger.svg";
 
 export default function NewWord() {
+  const [red, setRed] = useState(255);
   return (
     <>
       <form>
@@ -11,10 +13,17 @@ export default function NewWord() {
           <div className="color">
             <div
               className="color-square"
-              style={{ background: "rgb(255, 0, 0)" }}
+              style={{ background: `rgb(${red}, 0, 0)` }}
             ></div>
-            <input id="red" type="range" min="0" max="255" value="255" />
-            <div className="value">255</div>
+            <input
+              id="red"
+              type="range"
+              min="0"
+              max="255"
+              value={red}
+              onChange={(e) => setRed(e.target.value)}
+            />
+            <div className="value">{red}</div>
           </div>
           <div className="color">
             <div
