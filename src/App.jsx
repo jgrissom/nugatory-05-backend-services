@@ -20,6 +20,9 @@ function App() {
   }
   function handleAdd(text, r, g, b) {
     console.log(`add ${text}`);
+    const id =
+      words.length === 0 ? 1 : Math.max(...words.map((word) => word.id)) + 1;
+    setWords(words.concat({ id: id, text: text, r: r, g: g, b: b }));
   }
 
   return (
