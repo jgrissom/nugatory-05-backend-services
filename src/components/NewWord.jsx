@@ -15,7 +15,7 @@ export default function NewWord(props) {
 
   return (
     <>
-      <form onSubmit={(e) => handleSubmit(e)}>
+      {/* <form onSubmit={(e) => handleSubmit(e)}>
         <div id="overlay"></div>
         <div id="dialog">
           <header
@@ -91,7 +91,7 @@ export default function NewWord(props) {
             <button id="cancel">cancel</button>
           </div>
         </div>
-      </form>
+      </form> */}
       <img src={trigger} alt="New Word" id="trigger" />
     </>
   );
