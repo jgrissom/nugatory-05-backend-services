@@ -101,7 +101,12 @@ export default function NewWord(props) {
           </div>
         </form>
       ) : (
-        <img src={trigger} alt="New Word" id="trigger" />
+        <img
+          src={trigger}
+          alt="New Word"
+          id="trigger"
+          onClick={() => setShowDialog(true)}
+        />
       )}
     </>
   );
