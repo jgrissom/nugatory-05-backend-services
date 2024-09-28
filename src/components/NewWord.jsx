@@ -83,7 +83,7 @@ export default function NewWord(props) {
             />
           </div>
           <div>
-            <button type="submit" id="save">
+            <button disabled={text.trim().length === 0} type="submit" id="save">
               save
             </button>
           </div>
