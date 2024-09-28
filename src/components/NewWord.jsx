@@ -7,6 +7,7 @@ export default function NewWord(props) {
   const [green, setGreen] = useState(255);
   const [blue, setBlue] = useState(255);
   const [text, setText] = useState("");
+  const [showDialog, setShowDialog] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -92,7 +93,7 @@ export default function NewWord(props) {
           </div>
         </div>
       </form> */}
-      <img src={trigger} alt="New Word" id="trigger" />
+      {showDialog ? <hr /> : <img src={trigger} alt="New Word" id="trigger" />}
     </>
   );
 }
