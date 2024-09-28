@@ -21,11 +21,14 @@ export default function NewWord(props) {
     setText("");
     setShowDialog(false);
   }
+  function handleKeyUp(e) {
+    e.keyCode === 27 && hideDialog();
+  }
 
   return (
     <>
       {showDialog ? (
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <form onSubmit={(e) => handleSubmit(e)} onKeyUp={(e) => handleKeyUp(e)}>
           <div id="overlay"></div>
           <div id="dialog">
             <header
