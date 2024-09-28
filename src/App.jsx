@@ -1,29 +1,32 @@
-import { useState } from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
 import Counter from "./components/Counter";
 import NewWord from "./components/NewWord";
 import Word from "./components/Word";
 import "./App.css";
 
 function App() {
-  const [words, setWords] = useState([
-    { id: 1, text: "banana", r: 255, g: 255, b: 0 },
-    { id: 2, text: "apple", r: 255, g: 26, b: 0 },
-    { id: 3, text: "lime", r: 0, g: 255, b: 0 },
-    { id: 4, text: "orange", r: 255, g: 165, b: 0 },
-    { id: 5, text: "pear", r: 154, g: 205, b: 50 },
-    { id: 6, text: "blueberry", r: 0, g: 153, b: 255 },
-  ]);
+  const [words, setWords] = useState([]);
+  const apiEndpoint = "https://nugatoryapi.azurewebsites.net/api/word";
 
   function handleDelete(wordId) {
     console.log(`delete word: ${wordId}`);
-    setWords(words.filter((w) => w.id !== wordId));
+    // setWords(words.filter((w) => w.id !== wordId));
   }
   function handleAdd(text, r, g, b) {
     console.log(`add ${text}`);
-    const id =
-      words.length === 0 ? 1 : Math.max(...words.map((word) => word.id)) + 1;
-    setWords(words.concat({ id: id, text: text, r: r, g: g, b: b }));
+    // const id =
+    //   words.length === 0 ? 1 : Math.max(...words.map((word) => word.id)) + 1;
+    // setWords(words.concat({ id: id, text: text, r: r, g: g, b: b }));
   }
+  useEffect(() => {
+    // initial data loaded here
+    async function fetchData() {
+      const { data: fetchedWords } = await axios.get(apiEndpoint);
+      setWords(fetchedWords);
+    }
+    fetchData();
+  }, []);
 
   return (
     <div>
