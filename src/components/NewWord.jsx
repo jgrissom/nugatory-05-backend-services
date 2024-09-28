@@ -29,7 +29,7 @@ export default function NewWord(props) {
     <>
       {showDialog ? (
         <form onSubmit={(e) => handleSubmit(e)} onKeyUp={(e) => handleKeyUp(e)}>
-          <div id="overlay"></div>
+          <div id="overlay" onClick={hideDialog}></div>
           <div id="dialog">
             <header
               style={{
