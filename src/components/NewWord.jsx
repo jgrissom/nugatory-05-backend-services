@@ -12,6 +12,7 @@ export default function NewWord(props) {
   function handleSubmit(e) {
     e.preventDefault();
     props.onAdd(text, red, green, blue);
+    setShowDialog(false);
   }
 
   return (
