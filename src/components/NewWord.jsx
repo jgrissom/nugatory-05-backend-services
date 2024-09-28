@@ -8,9 +8,14 @@ export default function NewWord() {
   const [blue, setBlue] = useState(255);
   const [text, setText] = useState("");
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log("add word");
+  }
+
   return (
     <>
-      <form>
+      <form onSubmit={(e) => handleSubmit(e)}>
         <div id="overlay"></div>
         <div id="dialog">
           <header
