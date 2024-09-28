@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./NewWord.css";
 import trigger from "../assets/trigger.svg";
 
-export default function NewWord() {
+export default function NewWord(props) {
   const [red, setRed] = useState(255);
   const [green, setGreen] = useState(255);
   const [blue, setBlue] = useState(255);
@@ -10,7 +10,7 @@ export default function NewWord() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log("add word");
+    props.onAdd(text, red, green, blue);
   }
 
   return (

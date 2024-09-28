@@ -18,6 +18,9 @@ function App() {
     console.log(`delete word: ${wordId}`);
     setWords(words.filter((w) => w.id !== wordId));
   }
+  function handleAdd(text, r, g, b) {
+    console.log(`add ${text}`);
+  }
 
   return (
     <div>
@@ -26,7 +29,7 @@ function App() {
         <Word key={word.id} word={word} onDelete={handleDelete} />
       ))}
       <Counter totalWords={words.length} />
-      <NewWord />
+      <NewWord onAdd={handleAdd} />
     </div>
   );
 }
