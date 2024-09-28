@@ -16,7 +16,7 @@
   border-radius: 0.3em;
 }
 #dialog {
-  background: var(--main-color);
+  background: var(--main-dialog-bg-color);
   box-shadow: 0.15rem 0.15rem 0.35rem #1a1a1a;
   border: 0.1rem solid #1a1a1a;
   padding: 0.8rem;

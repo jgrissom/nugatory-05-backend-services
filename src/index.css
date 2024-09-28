@@ -1,6 +1,7 @@
 :root {
   --main-bg-color: #242424;
   --main-color: #242424f8;
+  --main-dialog-bg-color: #242424c8;
   --main-text-shadow: 0 0 0.25rem rgba(255, 255, 255, 0.6);
   --white-color: #e2e2e2;
   --button-color: #5e5e5e;
